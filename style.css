@@ -1,0 +1,369 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+/* Color Variables */
+:root {
+    --dark-green: #005A33;
+    --light-green: #74BC4B;
+    --yellow: #F1CB22;
+    --beige: #F8E8C2;
+    --brown: #8B5E3C;
+    --brown-red: #573F2F;
+    --off-white: #FAF7F2;
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--off-white);
+    color: var(--dark-green);
+    overflow-x: hidden;
+}
+
+p {
+    font-weight: 400;
+    font-size: 1em;
+}
+
+/* Animation */
+@keyframes appearTrans {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+
+@keyframes disappearTrans {
+    /* from {
+        opacity: 100;
+    } */
+    to {
+        opacity: 0;
+    }
+}
+
+/* Navbar */
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+    background-color: var(--dark-green);
+    background-image: url('navbg.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    color: var(--off-white);
+    transition: background-color 0.3s ease-in-out;
+    z-index: 9;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--off-white);
+    font-size: 1.2em;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--yellow);
+}
+
+.nav-center {
+    font-size: 2em;
+    font-weight: 700;
+}
+.nav-left {
+    align-items: flex-start;
+}
+/* Welcome */
+.welcome {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--dark-green);
+    color: var(--off-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+    animation: disappearTrans 1s linear forwards 3.5s;
+}
+
+.welcome h1 {
+    font-size: 15em;
+    animation: appearTrans 1.5s linear;
+}
+
+.welcome .text {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+
+.welcome p {
+    opacity: 0;
+    font-size: 3em;
+    text-wrap: nowrap;
+    overflow: hidden;
+    animation: appearTrans 1s linear forwards;
+}
+
+.welcome-one.welcome-one {
+    animation-delay: 1s;
+}
+
+.welcome-two.welcome-two {
+    animation-delay: 2s;
+}
+
+/* About us */
+.about-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    padding: 3em;
+}
+
+.about-us img {
+    width: 40%;
+    max-width: 400px;
+}
+
+.about-us div {
+    width: 60%;
+    font-size: 1.5em;
+    line-height: 1.6;
+}
+
+/* Our team */
+.our-team {
+    text-align: center;
+    padding: 3em 0;
+}
+
+.section-head-box {
+    background: linear-gradient(to right, var(--dark-green), var(--brown-red));
+    color: var(--off-white);
+    padding: 1em 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.team-container, .support-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2em;
+    padding: 1em 0;
+}
+
+.team-member, .support-member {
+    width: 15%;
+    text-align: center;
+}
+
+.team-member img, .support-member img {
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.team-member img, .support-member h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* p {
+    font-size: 1em;
+    color: var(--brown);
+} */
+
+/* Journey */
+.journey {
+    text-align: center;
+    padding: 3em 0;
+}
+
+.journey-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2em;
+    padding: 1em 0;
+}
+
+.journey-container .step {
+    width: 20%;
+    position: relative;
+    margin-top: 2em;
+}
+
+.journey-container .step img {
+    height: 10em;
+    position: relative;
+}
+
+.journey-container .step-number {
+    position: absolute;
+    z-index: 8;
+    top: -0.5em;
+    left: 0.5em;
+    background: var(--dark-green);
+    color: var(--off-white);
+    font-weight: bold;
+    font-size: 1.5em;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* Problem */
+.problem {
+
+}
+
+.problem .problem-container {
+    display: flex;
+}
+
+.problem .problem-container h3 {
+    text-align: center;
+    margin: 2em 1em;
+    padding: 0.5em;
+    color: var(--off-white);
+}
+
+.problem .problem-container .left-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.problem .problem-container .left-container img {
+    width: 33%;
+}
+
+/* Solution */
+.solution-container .top-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    padding: 3em;
+}
+
+.solution-container .top-container img {
+    width: 40%;
+}
+
+.solution-container .top-container div {
+    width: 40%;
+    font-size: 1.5em;
+    line-height: 1.6;
+    text-align: right;
+}
+
+.solution-container .bottom-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.solution-container .tag {
+    position: absolute;
+    width: 20em;
+}
+
+.solution-container .tag h4 {
+    color: var(--off-white);
+    background-color: var(--light-green);
+    padding: 1em;
+    font-size: 1.2em;
+}
+
+.solution-container .tag p {
+    color: var(--dark-green);
+    padding: 1em;
+}
+
+.solution-container .tag.one {
+    top: 10.5%;
+    left: 11%;
+    text-align: right;
+}
+
+.solution-container .tag.two {
+    top: 15%;
+    right: 9.3%;
+    text-align: left;
+}
+
+.solution-container .tag.three {
+    bottom: 27.5%;
+    left: 11%;
+    text-align: right;
+}
+
+/* Process */
+.process {
+
+}
+
+.process-container .top-container {
+    position: relative;
+    display: flex;
+    height: 5em;
+}
+
+.process-container .top-container .step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('stepbg.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 25%;
+    height: 100%;
+}
+
+.process-container .top-container h3 {
+    text-align: center;
+    padding: 1em 3.5em;
+    font-size: 1.2em;
+    color: var(--off-white);
+}
